@@ -1,6 +1,7 @@
 import 'package:book_store/core/constants.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/Styles.dart';
+import 'BestSellerListItem.dart';
 import 'BooksListView.dart';
 import 'CustomAppBar.dart';
 
@@ -28,8 +29,10 @@ class HomeViewBody extends StatelessWidget {
               ],
             ),
           ),
+          const BestSellerListItem(),
         ],
       ),
     );
   }
 }
+
