@@ -17,7 +17,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void initState(){
     // TODO: implement initState
     super.initState();
-    Future.delayed(const Duration(seconds: 1),(){
+    Future.delayed(const Duration(seconds: 3),(){
       Get.to(()=>const HomeView(),transition: Transition.fade);
     });
   }
