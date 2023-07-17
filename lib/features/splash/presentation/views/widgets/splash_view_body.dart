@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../home/presentation/views/HomeView.dart';
 
@@ -18,7 +18,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(seconds: 3),(){
-      Get.to(()=>const HomeView(),transition: Transition.fade);
+      GoRouter.of(context).push("/home");
     });
   }
   @override
