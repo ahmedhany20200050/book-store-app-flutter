@@ -1,3 +1,5 @@
+import 'package:book_store/core/Styles.dart';
+import 'package:book_store/features/home/presentation/views/widgets/CustomListViewItem.dart';
 import 'package:flutter/material.dart';
 
 import 'CustomBookDetailsAppBar.dart';
@@ -11,13 +13,37 @@ class BookDetailsViewBody extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30.0),
         child: Column(
-          children: const [
-            CustomBookDetailsAppBar(),
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const CustomBookDetailsAppBar(),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.5,
+              child: const BookImageItem(),
+            ),
+            const SizedBox(
+              height: 43,
+            ),
+             Text(
+              "The Jungle Book",
+              style: Styles.textStyle30.copyWith(
+                fontWeight: FontWeight.bold
+              ),
+            ),
+            const SizedBox(
+              height: 6,
+            ),
+             Text(
+              "Rudyard Kipling",
+              style: Styles.textStyle18.copyWith(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w500,
+                color: Colors.white70,
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
