@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'CustomBookDetailsAppBar.dart';
 import 'books_action.dart';
+import 'SimilarBooksListView.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -52,11 +53,32 @@ class BookDetailsViewBody extends StatelessWidget {
               height: 37,
             ),
             const BooksAction(),
+            SizedBox(
+              height:50,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                  "You may also like",
+                style:Styles.textStyle16.copyWith(
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height:16,
+            ),
+            const SimilarBooksListView(),
+            const SizedBox(
+              height:40,
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
 
 
