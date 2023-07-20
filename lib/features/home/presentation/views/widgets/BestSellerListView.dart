@@ -13,7 +13,7 @@ class BestSellerListView extends StatelessWidget {
       shrinkWrap: true,
       itemBuilder: (context,index){
         return const Padding(
-          padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(16.0),
           child: BestSellerListItem(),
         );
       },

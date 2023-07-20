@@ -1,4 +1,5 @@
 
+import 'package:book_store/features/search/presentation/views/searchView.dart';
 import 'package:go_router/go_router.dart';
 
 import '../features/home/presentation/views/HomeView.dart';
@@ -21,6 +22,11 @@ abstract class AppRouter{
         path: '/details',
         builder: (context, state) {
           return const BookDetailsView();
+        }),
+    GoRoute(
+        path: '/search',
+        builder: (context, state) {
+          return const SearchView();
         }),
   ]);
 }
